@@ -1,0 +1,12 @@
+{
+	"build":{
+		"buildShell":"build.sh",
+		"dockerfile":"Dockerfile"
+	},
+	"version":"v1.0.0",
+	"deployment":{
+		"isExpose":"true",
+		"envs":{},
+		"ports":{}
+	}
+}
