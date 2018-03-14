@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+*.iml
+*.log
+dependency-reduced-pom.xml
+apprun/projects/*
+apprun/files/*
+apprun/modules/*
+appbuildresources/files/*
+target
+.DS_Store
