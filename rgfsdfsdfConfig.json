@@ -1,0 +1,13 @@
+{
+	"build":{
+		"buildShell":"bookinfo/productpage/Jenkinsfile",
+		"dockerfile":"bookinfo/productpage/Dockerfile",
+		"pomfile":"bookinfo/productpage/pom.xml"
+	},
+	"version":"suv:v1",
+	"deployment":{
+		"isExpose":"true",
+		"envs":{},
+		"ports":{}
+	}
+}
