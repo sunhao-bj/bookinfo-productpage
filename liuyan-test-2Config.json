@@ -1,0 +1,16 @@
+{
+	"build":{
+		"buildShell":"as",
+		"dockerfile":"sad"
+	},
+	"version":"asd",
+	"deployment":{
+		"isExpose":"true",
+		"envs":{
+			"asdasd":"asd"
+		},
+		"ports":{
+			"80":"80"
+		}
+	}
+}
