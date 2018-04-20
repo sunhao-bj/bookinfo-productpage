@@ -3,12 +3,12 @@
 		"buildShell":"build.sh",
 		"dockerfile":"Dockerfile"
 	},
-	"version":"v1.0",
+	"version":"v1.0.0",
 	"deployment":{
 		"isExpose":"true",
 		"envs":{},
 		"ports":{
-			"80":"9080"
+			"9080":"9080"
 		}
 	}
 }
