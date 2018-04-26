@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-@Library('github.com/MrChencc/dos-pipeline-test@master')
+@Library('TAP-PIPELINE-LIBRARY')
 def dummy
 
 import com.tod.CustomPipelineUtil
