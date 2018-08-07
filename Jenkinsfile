@@ -1,10 +1,11 @@
 #!/usr/bin/groovy
 @Library('TAP-PIPELINE-LIBRARY')
+
 def dummy
 
 import com.tod.CustomPipelineUtil
 
-clientsNode {
+mavenNode {
     ws {
         env.setProperty('FABRIC8_DOCKER_REGISTRY_SERVICE_HOST', registryHost)
         env.setProperty('FABRIC8_DOCKER_REGISTRY_SERVICE_PORT', registryPort)
@@ -15,7 +16,7 @@ clientsNode {
         def docker_image = ''
         def proj_version = "${customConfig.version}.${env.BUILD_NUMBER}"
 
-        container(name: 'clients') {
+        container(name: 'maven') {
             stage('build with config') {
                 buildWithConfig {
                     custom = customConfig
@@ -23,15 +24,16 @@ clientsNode {
             }
 
             stage('docker build and push image') {
-                docker_image = customOtherRelease {
+                docker_image = customMavenRelease {
                     version = proj_version
+                    pom = customConfig.build.pomfile
                     dockerfilePath = customConfig.build.dockerfile
                 }
                 echo "Docker image : ${docker_image}"
             }
 
             stage('deploy application') {
-                def yaml = getCustomK8SYaml {
+                def yaml = getCustomK8SYaml{
                     deployment = customConfig.deployment
                     version = proj_version
                     image = docker_image
