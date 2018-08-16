@@ -1,0 +1,11 @@
+{
+	"bind":{
+		"app":"2ec2320e-bc5c-7e73-5376-679238813f88",
+		"controller":"http://dos-msm-service.dostest.svc:29155"
+	},
+	"build":{
+		"buildShell":"build.sh",
+		"dockerfile":"Dockerfile"
+	},
+	"version":"v7.0.0"
+}
