@@ -7,7 +7,7 @@
 	},
 	"build":{
 		"buildShell":"build.sh",
-		"dockerfile":"Dcokerfile"
+		"dockerfile":"Dockerfile"
 	},
-	"version":"v1.0.0"
+	"version":"v1.1"
 }
