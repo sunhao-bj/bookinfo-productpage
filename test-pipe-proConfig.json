@@ -1,0 +1,13 @@
+{
+	"bind":{
+		"app":"e235a5b1-5f7c-4780-91c9-37c3858e3ef1",
+		"controller":"http://dos-msm-service.dostest.svc:29155",
+		"msname":"test-pipe-mic",
+		"msversion":"v1.0.0"
+	},
+	"build":{
+		"buildShell":"build.sh",
+		"dockerfile":"Dockerfile"
+	},
+	"version":"v1.0.1"
+}
