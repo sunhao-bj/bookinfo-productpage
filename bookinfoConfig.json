@@ -1,0 +1,13 @@
+{
+	"bind":{
+		"app":"adcf31f5-5a2a-efa2-9275-0007f648f0c0",
+		"controller":"http://dos-msm-service.demo.svc:29155",
+		"msname":"test-ms",
+		"msversion":"v1.0.0"
+	},
+	"build":{
+		"buildShell":"build.sh",
+		"dockerfile":"Dockerfile"
+	},
+	"version":"v1.0.0"
+}
