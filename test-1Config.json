@@ -1,0 +1,13 @@
+{
+	"bind":{
+		"app":"7bab8cb4-341f-9cb6-54ef-26c41c751ba5",
+		"controller":"http://dos-msm-service.demo.svc:29155",
+		"msname":"sshworker",
+		"msversion":"v1.0.0"
+	},
+	"build":{
+		"buildShell":"build.sh",
+		"dockerfile":"Dockerfile"
+	},
+	"version":"v1.0"
+}
