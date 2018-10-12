@@ -5,7 +5,7 @@ def dummy
 
 import com.tod.CustomPipelineUtil
 
-nodeJsNode {
+mavenNode {
     ws {
         env.setProperty('FABRIC8_DOCKER_REGISTRY_SERVICE_HOST', registryHost)
         env.setProperty('FABRIC8_DOCKER_REGISTRY_SERVICE_PORT', registryPort)
@@ -16,16 +16,17 @@ nodeJsNode {
         def docker_image = ''
         def proj_version = "${customConfig.version}.${env.BUILD_NUMBER}"
 
-        container(name: 'builder') {
+        container(name: 'maven') {
             stage('build with config') {
-                nodeJsBuild {
+                buildWithConfig {
                     custom = customConfig
                 }
             }
 
             stage('docker build and push image') {
-                docker_image = customOtherRelease {
+                docker_image = customMavenRelease {
                     version = proj_version
+                    pom = customConfig.build.pomfile
                     dockerfilePath = customConfig.build.dockerfile
                 }
                 echo "Docker image : ${docker_image}"
