@@ -1,10 +1,11 @@
 #!/usr/bin/groovy
 @Library('TAP-PIPELINE-LIBRARY')
+
 def dummy
 
 import com.tod.CustomPipelineUtil
 
-clientsNode {
+nodeJsNode {
     ws {
         env.setProperty('FABRIC8_DOCKER_REGISTRY_SERVICE_HOST', registryHost)
         env.setProperty('FABRIC8_DOCKER_REGISTRY_SERVICE_PORT', registryPort)
@@ -15,9 +16,9 @@ clientsNode {
         def docker_image = ''
         def proj_version = "${customConfig.version}.${env.BUILD_NUMBER}"
 
-        container(name: 'clients') {
+        container(name: 'builder') {
             stage('build with config') {
-                buildWithConfig {
+                nodeJsBuild {
                     custom = customConfig
                 }
             }
