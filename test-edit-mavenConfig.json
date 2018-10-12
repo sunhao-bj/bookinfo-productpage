@@ -1,14 +1,14 @@
 {
 	"bind":{
-		"app":"2ec2320e-bc5c-7e73-5376-679238813f88",
+		"app":"ce784043-63f9-fa35-41dc-c9b38d00271b",
 		"controller":"http://dos-msm-service.dostest.svc:29155",
-		"msname":"aaa",
-		"msversion":"v3.0.0"
+		"msname":"a1",
+		"msversion":"v1.0.0"
 	},
 	"build":{
-		"buildShell":"buidl.sh",
+		"buildShell":"build.sh",
 		"dockerfile":"dockerifle",
 		"pomfile":"pom.xml"
 	},
-	"version":"1"
+	"version":"2"
 }
