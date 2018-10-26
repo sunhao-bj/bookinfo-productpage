@@ -1,0 +1,13 @@
+{
+	"bind":{
+		"app":"79b3626b-d353-37d7-11e3-81ec1e4ec7dc",
+		"controller":"http://dos-msm-service.dostest.svc:29155",
+		"msname":"liuyan-test-1-1",
+		"msversion":"v1.0.0"
+	},
+	"build":{
+		"buildShell":"build.sh",
+		"dockerfile":"Dockerfile"
+	},
+	"version":"v1.0"
+}
