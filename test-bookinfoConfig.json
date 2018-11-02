@@ -1,0 +1,13 @@
+{
+	"bind":{
+		"app":"3448f887-daa5-b3d4-3ba7-cf270b35edf6",
+		"controller":"http://dos-msm-service.dostest.svc:29155",
+		"msname":"bookinfo",
+		"msversion":"v1.0.0"
+	},
+	"build":{
+		"buildShell":"build.sh",
+		"dockerfile":"Dockerfile"
+	},
+	"version":"v3.5.6"
+}
